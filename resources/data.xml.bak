@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pack>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="1" fixedrot="true" fric="0.2" gid="3" id="2" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="player" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="3" static="false">
+        <snippets>
+            <s enabled="true" id="2">
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="33" list="0" val="left"/>
+                <prop id="34" list="0" val="right"/>
+                <prop id="37" list="0" val="0"/>
+                <prop id="38" list="0" val="true"/>
+                <prop id="39" list="0" val="false"/>
+                <prop id="40" list="0" val="0.0"/>
+                <prop id="41" list="0" val="Animation 1"/>
+                <prop id="42" list="0" val="Animation 1"/>
+                <prop id="43" list="0" val="Animation 0"/>
+                <prop id="11" list="0" val="30.0"/>
+                <prop id="44" list="0" val="Animation 0"/>
+                <prop id="45" list="0" val="false"/>
+                <prop id="46" list="0" val="false"/>
+            </s>
+            <s enabled="true" id="3">
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="33" list="0" val="No Control"/>
+                <prop id="34" list="0" val="No Control"/>
+                <prop id="37" list="0" val="0.0"/>
+                <prop id="38" list="0" val="true"/>
+                <prop id="41" list="0" val="up"/>
+                <prop id="42" list="0" val="false"/>
+                <prop id="43" list="0" val="false"/>
+                <prop id="11" list="0" val="15.0"/>
+                <prop id="45" list="0" val="25"/>
+                <prop id="47" list="0" val="Animation 0"/>
+                <prop id="48" list="0" val="Animation 1"/>
+                <prop id="49" list="0" val="Animation 0"/>
+                <prop id="50" list="0" val="Animation 1"/>
+                <prop id="52" list="0" val="false"/>
+                <prop id="53" list="0" val="Animation 0"/>
+                <prop id="54" list="0" val="Animation 1"/>
+                <prop id="55" list="0" val="false"/>
+                <prop id="56" list="0" val="false"/>
+                <prop id="57" list="0" val="false"/>
+                <prop id="58" list="0" val="false"/>
+                <prop id="60" list="0" val="false"/>
+                <prop id="62" list="0" val="0.2"/>
+                <prop id="63" list="0" val="50"/>
+            </s>
+        </snippets>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="573" id="3" name="player" shared="false" width="1013">
+        <anim across="1" down="1" durations="100" height="573" id="0" loop="true" name="Animation 0" numframes="1" originx="506" originy="286" sync="true" version="2" width="1013">
+            <poly data="4,7,0,62,0,62,60,7,60" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="1" down="1" durations="100" height="60" id="1" loop="true" name="Animation 1" numframes="1" originx="53" originy="30" sync="true" version="2" width="106">
+            <poly data="4,45,0,100,0,100,60,45,60" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <tileset across="1" atlasID="0" desc="" down="1" id="0" name="tile" oid="-1" shared="false" th="32" tw="32">
+        <tile collision="24" data="" durations="100" frames="0" id="0" order="-1"/>
+    </tileset>
+    <tileset across="1" atlasID="0" desc="" down="1" id="1" name="tile2" oid="-1" shared="false" th="32" tw="32">
+        <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>
+    </tileset>
+</pack>
