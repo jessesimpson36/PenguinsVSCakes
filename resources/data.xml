@@ -46,11 +46,11 @@
             </s>
         </snippets>
     </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="573" id="3" name="player" shared="false" width="1013">
-        <anim across="1" down="1" durations="100" height="573" id="0" loop="true" name="Animation 0" numframes="1" originx="506" originy="286" sync="true" version="2" width="1013">
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="20" id="3" name="player" shared="false" width="31">
+        <anim across="1" down="1" durations="100" height="20" id="0" loop="true" name="Animation 0" numframes="1" originx="15" originy="10" sync="true" version="2" width="31">
             <poly data="4,7,0,62,0,62,60,7,60" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="1" down="1" durations="100" height="60" id="1" loop="true" name="Animation 1" numframes="1" originx="53" originy="30" sync="true" version="2" width="106">
+        <anim across="1" down="1" durations="100" height="20" id="1" loop="true" name="Animation 1" numframes="1" originx="15" originy="10" sync="true" version="2" width="30">
             <poly data="4,45,0,100,0,100,60,45,60" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
