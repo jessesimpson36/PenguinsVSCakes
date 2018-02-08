@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <pack>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="4" fixedrot="false" fric="0.2" gid="3" id="4" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="cake" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="5" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="300" id="5" name="cake" shared="false" width="390">
+        <anim across="1" down="1" durations="100" height="300" id="0" loop="true" name="Animation 0" numframes="1" originx="195" originy="150" sync="false" version="2" width="390">
+            <poly data="4,0,0,390,0,390,300,0,300" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="1" fixedrot="true" fric="0.2" gid="3" id="2" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="player" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="3" static="false">
         <snippets>
             <s enabled="true" id="2">
@@ -52,6 +60,14 @@
         </anim>
         <anim across="1" down="1" durations="100" height="65" id="1" loop="true" name="Animation 1" numframes="1" originx="50" originy="32" sync="true" version="2" width="100">
             <poly data="4,45,0,100,0,100,60,45,60" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="5" fixedrot="false" fric="0.2" gid="3" id="6" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="ship" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="7" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="374" id="7" name="ship" shared="false" width="122">
+        <anim across="1" down="1" durations="100" height="374" id="0" loop="true" name="Animation 0" numframes="1" originx="61" originy="187" sync="false" version="2" width="122">
+            <poly data="4,0,0,122,0,122,374,0,374" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <tileset across="1" atlasID="0" desc="" down="1" id="0" name="tile" oid="-1" shared="false" th="32" tw="32">
