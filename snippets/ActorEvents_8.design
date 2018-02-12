@@ -10,4 +10,14 @@
         </collide>
     </group>
     <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <die comment="false" x="26" y="45">
+                    <ACTOR eid="this" id="0"/>
+                </die>
+            </group>
+        </collide>
+    </group>
+    <group eventID="3" id="-1"/>
 </groups>

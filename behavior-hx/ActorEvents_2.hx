@@ -91,21 +91,21 @@ class ActorEvents_2 extends ActorScript
 			}
 		});
 		
-		/* =========================== Keyboard =========================== */
-		addKeyStateListener("up", function(pressed:Bool, released:Bool, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && pressed)
-			{
-				actor.applyImpulseInDirection(270, 30);
-			}
-		});
-		
 		/* ======================== Actor of Type ========================= */
 		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled && sameAsAny(getActorType(8), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
 				actor.say("Health Manager", "_customBlock_SetHealth", [(cast(actor.say("Health Manager", "_customBlock_GetCurrentHealth"), Float) - 2)]);
+			}
+		});
+		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(6), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				switchScene(GameModel.get().scenes.get(1).getID(), createFadeOut(2, Utils.getColorRGB(153,0,153)), createFadeIn(2, Utils.getColorRGB(0,0,0)));
 			}
 		});
 		

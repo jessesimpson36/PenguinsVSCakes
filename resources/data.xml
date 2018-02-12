@@ -72,9 +72,9 @@
         <blank name="Self" order="0" type="actor"/>
         <blank name="Amount" order="1" type="number"/>
     </custom-block>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="1" fixedrot="true" fric="0.2" gid="3" id="2" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="player" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="3" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="1" fixedrot="true" fric="0.0" gid="3" id="2" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="player" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="3" static="false">
         <snippets>
-            <s enabled="false" id="3">
+            <s enabled="true" id="3">
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="33" list="0" val="left"/>
                 <prop id="34" list="0" val="right"/>
@@ -83,8 +83,8 @@
                 <prop id="41" list="0" val="up"/>
                 <prop id="42" list="0" val="false"/>
                 <prop id="43" list="0" val="false"/>
-                <prop id="11" list="0" val="15.0"/>
-                <prop id="45" list="0" val="25"/>
+                <prop id="11" list="0" val="20"/>
+                <prop id="45" list="0" val="30"/>
                 <prop id="47" list="0" val="Animation 0"/>
                 <prop id="48" list="0" val="Animation 1"/>
                 <prop id="49" list="0" val="Animation 0"/>
@@ -117,9 +117,9 @@
                 <prop id="11" list="0" val="false"/>
                 <prop id="12" list="0" val="-1"/>
                 <prop id="13" list="0" val=""/>
-                <prop id="14" list="0" val="-1"/>
-                <prop id="15" list="0" val="-1"/>
-                <prop id="16" list="0" val="-1"/>
+                <prop id="14" list="0" val="No Sound"/>
+                <prop id="15" list="0" val="No Sound"/>
+                <prop id="16" list="0" val="No Sound"/>
                 <prop id="17" list="0" val="false"/>
                 <prop id="18" list="0" val="0.0"/>
                 <prop id="19" list="0" val="0.0"/>
@@ -161,8 +161,8 @@
                 <prop id="40" list="0" val="0.0"/>
                 <prop id="41" list="0" val="Animation 1"/>
                 <prop id="42" list="0" val="Animation 1"/>
-                <prop id="11" list="0" val="30.0"/>
                 <prop id="43" list="0" val="Animation 0"/>
+                <prop id="11" list="0" val="30.0"/>
                 <prop id="44" list="0" val="Animation 0"/>
                 <prop id="45" list="0" val="true"/>
                 <prop id="46" list="0" val="true"/>
@@ -188,7 +188,7 @@
         <blank name="Self" order="0" type="actor"/>
         <blank name="Status" order="1" type="boolean"/>
     </custom-block>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="5" fixedrot="false" fric="0.2" gid="3" id="6" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="ship" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="7" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="5" fixedrot="true" fric="0.2" gid="3" id="6" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="ship" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="7" static="false">
         <snippets/>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="374" id="7" name="ship" shared="false" width="122">
