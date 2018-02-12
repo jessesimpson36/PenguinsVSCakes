@@ -14,4 +14,18 @@
         </event-collide-actortotype>
     </group>
     <group eventID="2" id="-1"/>
+    <group eventID="4" id="0">
+        <event-periodic comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <say comment="false" x="26" y="42">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="Fire Bullet"/>
+                    <int id="2" val="FireBullet"/>
+                </say>
+            </group>
+            <int id="0" val="2"/>
+            <ACTOR eid="this" id="2"/>
+        </event-periodic>
+    </group>
+    <group eventID="4" id="-1"/>
 </groups>
