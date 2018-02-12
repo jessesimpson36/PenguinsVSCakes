@@ -9,7 +9,7 @@
                         <custom-17 comment="false" id="0" x="0" y="0">
                             <ACTOR eid="this" id="0"/>
                         </custom-17>
-                        <int id="1" val=".1"/>
+                        <int id="1" val="2"/>
                     </minus>
                 </custom-11>
             </group>
@@ -27,7 +27,7 @@
                         <custom-17 comment="false" id="0" x="0" y="0">
                             <ACTOR eid="this" id="0"/>
                         </custom-17>
-                        <int id="1" val=".1"/>
+                        <int id="1" val="2"/>
                     </minus>
                 </custom-11>
             </group>
