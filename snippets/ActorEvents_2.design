@@ -36,4 +36,25 @@
         </event-collide-actortotype>
     </group>
     <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-key-press-release comment="false" x="8" y="80">
+            <group eventID="3" id="-1">
+                <push-shove2 comment="false" x="19" y="107">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <int id="2" val="270"/>
+                    <int id="3" val="30"/>
+                </push-shove2>
+            </group>
+            <control eid="0" id="0"/>
+            <int id="1" val="0"/>
+        </event-key-press-release>
+    </group>
+    <group eventID="3" id="4">
+        <if comment="false" x="53" y="234">
+            <group eventID="3" id="-1"/>
+            <int id="0" val=""/>
+        </if>
+    </group>
+    <group eventID="3" id="-1"/>
 </groups>
