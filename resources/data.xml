@@ -117,9 +117,9 @@
                 <prop id="11" list="0" val="false"/>
                 <prop id="12" list="0" val="-1"/>
                 <prop id="13" list="0" val=""/>
-                <prop id="14" list="0" val="No Sound"/>
-                <prop id="15" list="0" val="No Sound"/>
-                <prop id="16" list="0" val="No Sound"/>
+                <prop id="14" list="0" val="-1"/>
+                <prop id="15" list="0" val="-1"/>
+                <prop id="16" list="0" val="-1"/>
                 <prop id="17" list="0" val="false"/>
                 <prop id="18" list="0" val="0.0"/>
                 <prop id="19" list="0" val="0.0"/>
