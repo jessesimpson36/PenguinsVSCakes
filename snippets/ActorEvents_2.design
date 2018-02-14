@@ -98,4 +98,36 @@
         </event-collide-actortotype>
     </group>
     <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-collide-actortotype comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <custom-13 comment="false" x="26" y="47">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="-2"/>
+                </custom-13>
+                <die comment="false" x="26" y="74">
+                    <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                </die>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <actortype eid="20" id="1"/>
+        </event-collide-actortotype>
+    </group>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-collide-actortotype comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <custom-13 comment="false" x="26" y="47">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="2"/>
+                </custom-13>
+                <die comment="false" x="26" y="74">
+                    <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                </die>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <actortype eid="22" id="1"/>
+        </event-collide-actortotype>
+    </group>
+    <group eventID="6" id="-1"/>
 </groups>

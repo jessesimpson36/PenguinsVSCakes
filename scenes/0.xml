@@ -11,6 +11,14 @@
         <actor a="0.0" aid="2" c="false" group="3" id="2" name="player 2" sx="1.0" sy="1.0" x="211" y="212" z="0"/>
         <actor a="0.0" aid="3" c="false" group="3" id="4" name="cake 3" sx="0.2" sy="0.2" x="183" y="260" z="0"/>
         <actor a="0.0" aid="4" c="false" group="3" id="6" name="ship 4" sx="1.0" sy="1.0" x="3075" y="72" z="0"/>
+        <actor a="0.0" aid="6" c="false" group="3" id="20" name="badFish 6" sx="1.0" sy="1.0" x="682" y="397" z="0"/>
+        <actor a="0.0" aid="9" c="false" group="3" id="22" name="goodfish 9" sx="1.0" sy="1.0" x="1279" y="390" z="0"/>
+        <actor a="0.0" aid="10" c="false" group="3" id="22" name="goodfish 10" sx="1.0" sy="1.0" x="1087" y="389" z="0"/>
+        <actor a="0.0" aid="12" c="false" group="3" id="20" name="badFish 12" sx="1.0" sy="1.0" x="964" y="392" z="0"/>
+        <actor a="0.0" aid="14" c="false" group="3" id="20" name="badFish 14" sx="1.0" sy="1.0" x="1962" y="394" z="0"/>
+        <actor a="0.0" aid="20" c="false" group="3" id="20" name="badFish 20" sx="1.0" sy="1.0" x="2200" y="419" z="0"/>
+        <actor a="0.0" aid="23" c="false" group="3" id="22" name="goodfish 23" sx="1.0" sy="1.0" x="2362" y="246" z="0"/>
+        <actor a="0.0" aid="31" c="false" group="3" id="22" name="goodfish 31" sx="1.0" sy="1.0" x="2822" y="333" z="0"/>
     </actors>
     <snippets/>
     <terrain>
