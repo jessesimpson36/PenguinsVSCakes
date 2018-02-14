@@ -47,7 +47,7 @@
                             <ACTOR eid="this" id="0"/>
                         </die>
                         <scene-change-color comment="false" x="37" y="139">
-                            <scene eid="1" id="0"/>
+                            <scene eid="2" id="0"/>
                             <int id="1" val="0"/>
                             <int id="2" val="2"/>
                             <color b="153" g="0" id="3" r="153"/>
@@ -73,7 +73,7 @@
         <event-collide-actortotype comment="false" x="15" y="15">
             <group eventID="4" id="-1">
                 <scene-change-color comment="false" x="26" y="47">
-                    <scene eid="1" id="0"/>
+                    <scene eid="2" id="0"/>
                     <int id="1" val="0"/>
                     <int id="2" val="2"/>
                     <color b="153" g="0" id="3" r="153"/>
@@ -97,6 +97,28 @@
                 <die comment="false" x="26" y="74">
                     <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
                 </die>
+                <if comment="false" x="26" y="106">
+                    <group eventID="5" id="-1">
+                        <die comment="false" x="37" y="144">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                        <scene-change-color comment="false" x="37" y="171">
+                            <scene eid="2" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="2"/>
+                            <color b="153" g="0" id="3" r="153"/>
+                            <int id="4" val="0"/>
+                            <int id="5" val="2"/>
+                            <color b="0" g="0" id="6" r="0"/>
+                        </scene-change-color>
+                    </group>
+                    <lesseq comment="false" id="0" x="0" y="0">
+                        <custom-17 comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                        </custom-17>
+                        <int id="1" val="0"/>
+                    </lesseq>
+                </if>
             </group>
             <ACTOR eid="this" id="0"/>
             <actortype eid="20" id="1"/>

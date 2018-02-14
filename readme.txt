@@ -22,6 +22,9 @@ Instructions:
     
     Alternatively,
     Green Fish will increase the player's health by 1/4 
+	
+	Level 1 displays the basic mechanics of the game and is
+	set on a deserted beach theme planet
 
 
 Cheat Codes
@@ -49,11 +52,12 @@ CreativeCommons CC0 1.0
             * play-tested
 
         * Anam Navied:
-            * Art work
+            * Art work (screen and pixelated objects)
+			* added fish behaviors, end screen transition
             * Play-tested
-            * 
 
         * Mark Snedecor:
             * Entertained Jesse and Anam.
             * Lead Cheer leader
+			* made the original pixel art
 
