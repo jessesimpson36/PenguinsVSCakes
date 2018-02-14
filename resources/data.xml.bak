@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <pack>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="16" fixedrot="false" fric="0.2" gid="3" id="20" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="badFish" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="21" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="16" fixedrot="true" fric="0.2" gid="3" id="20" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="badFish" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="21" static="false">
         <snippets/>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="42" id="21" name="badFish" shared="false" width="42">
@@ -31,7 +31,7 @@
                 <prop id="15" list="0" val="0.0"/>
                 <prop id="16" list="0" val="false"/>
                 <prop id="17" list="0" val="false"/>
-                <prop id="18" list="0" val="true"/>
+                <prop id="18" list="0" val="false"/>
                 <prop id="19" list="0" val="1.0"/>
                 <prop id="20" list="0" val="0.0"/>
                 <prop id="21" list="0" val="false"/>
@@ -76,7 +76,7 @@
     <custom-block blocktag="custom-16" blocktype="NORMAL" code="cast(.say(&quot;Health Manager&quot;, &quot;_customBlock_GetMaxHealth&quot;), Float)" desc="" global="false" gui="Maximum Health For %0" id="16" message="GetMaxHealth" name="GetMaxHealth" oid="-1" return="number" shared="false" snippetID="10">
         <blank name="Self" order="0" type="actor"/>
     </custom-block>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="17" fixedrot="false" fric="0.2" gid="3" id="22" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="goodfish" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="23" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="17" fixedrot="true" fric="0.2" gid="3" id="22" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="goodfish" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="23" static="false">
         <snippets/>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="42" id="23" name="goodfish" shared="false" width="42">
@@ -128,7 +128,7 @@
                 <prop id="5" list="0" val="Damaged"/>
                 <prop id="7" list="0" val="Kill"/>
                 <prop id="8" list="0" val="false"/>
-                <prop id="9" list="0" val="0.5"/>
+                <prop id="9" list="0" val="1"/>
                 <prop id="10" list="0" val="true"/>
                 <prop id="11" list="0" val="false"/>
                 <prop id="12" list="0" val="-1"/>
@@ -187,10 +187,10 @@
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="64" id="3" name="player" shared="false" width="100">
         <anim across="1" down="1" durations="100" height="64" id="0" loop="true" name="Animation 0" numframes="1" originx="50" originy="32" sync="true" version="2" width="100">
-            <poly data="4,7,0,62,0,62,55,7,55" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+            <poly data="4,7,2,62,2,62,57,7,57" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
         <anim across="1" down="1" durations="100" height="65" id="1" loop="true" name="Animation 1" numframes="1" originx="50" originy="32" sync="true" version="2" width="100">
-            <poly data="4,45,5,100,5,100,60,45,60" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
+            <poly data="4,35,2,90,2,90,57,35,57" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
         </anim>
         <anim across="2" down="2" durations="100,100,100,100" height="128" id="2" loop="false" name="Animation2" numframes="4" originx="50" originy="32" sync="false" version="2" width="200">
             <poly data="4,50,0,100,0,100,64,50,64" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="false"/>
