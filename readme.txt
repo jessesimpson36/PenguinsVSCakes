@@ -57,7 +57,7 @@ CreativeCommons CC0 1.0
             * Play-tested
 
         * Mark Snedecor:
-            * Entertained Jesse and Anam.
-            * Lead Cheer leader
-			* made the original pixel art
+            * Implemented victory and failure conditions (Death and progression)
+	    * Tweaked movement behaviors
+	    * made the original pixel art
 
