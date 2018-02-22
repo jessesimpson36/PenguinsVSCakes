@@ -267,7 +267,7 @@
         </anim>
     </sprite>
     <tileset across="1" atlasID="0" desc="" down="1" id="0" name="tile" oid="-1" shared="false" th="32" tw="32">
-        <tile collision="24" data="" durations="100" frames="0" id="0" order="-1"/>
+        <tile collision="-1" data="" durations="100" frames="0" id="0" order="-1"/>
     </tileset>
     <tileset across="1" atlasID="0" desc="" down="1" id="1" name="tile2" oid="-1" shared="false" th="32" tw="32">
         <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>
