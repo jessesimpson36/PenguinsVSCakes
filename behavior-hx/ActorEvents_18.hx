@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_4 extends ActorScript
+class ActorEvents_18 extends ActorScript
 {
 	
 	
@@ -82,14 +82,14 @@ class ActorEvents_4 extends ActorScript
 	override public function init()
 	{
 		
-		/* ======================= Every N seconds ======================== */
-		runPeriodically(1000 * 2, function(timeTask:TimedTask):Void
+		/* ============================ Click ============================= */
+		addMousePressedListener(function(list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				actor.say("Fire Bullet", "_customEvent_" + "FireBullet");
+				switchScene(GameModel.get().scenes.get(0).getID(), createFadeOut(1, Utils.getColorRGB(0,0,0)), createFadeIn(1, Utils.getColorRGB(0,0,0)));
 			}
-		}, actor);
+		});
 		
 	}
 	
