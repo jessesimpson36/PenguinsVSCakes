@@ -40,6 +40,7 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
+import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -69,46 +70,25 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_8 extends ActorScript
+class SceneEvents_0 extends SceneScript
 {
 	
 	
-	public function new(dummy:Int, actor:Actor, dummy2:Engine)
+	public function new(dummy:Int, dummy2:Engine)
 	{
-		super(actor);
+		super();
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== Something Else ======================== */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		/* ========================= Type & Type ========================== */
+		addSceneCollisionListener(getActorType(2).ID, getActorType(6).ID, function(event:Collision, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				recycleActor(event.thisActor);
-			}
-		});
-		
-		/* ======================== Something Else ======================== */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				recycleActor(actor);
-			}
-		});
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if((actor.getXVelocity() == 0))
-				{
-					recycleActor(actor);
-				}
+				switchScene(GameModel.get().scenes.get(3).getID(), createPixelizeOut(1, Utils.getColorRGB(153,51,255)), createFadeIn(1, Utils.getColorRGB(0,0,0)));
 			}
 		});
 		
