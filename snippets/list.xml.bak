@@ -4,6 +4,8 @@
         <blocks/>
         <events>
             <event displayName="Type - Type" enabled="true" id="1" name="event-collide-typetotype" order="1" repeats="true"/>
+            <event displayName="Keyboard" enabled="true" id="2" name="event-key-press-release" order="2" repeats="true"/>
+            <event displayName="Actor Created" enabled="true" id="3" name="event-type-create-kill" order="3" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="2" attachedevent="true" class="scripts.ActorEvents_2" classname="scripts.ActorEvents_2" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="1" name="ActorEvents_2" oid="-1" package="scripts." shared="false" type="actor">
@@ -278,10 +280,16 @@
         <blocks/>
         <events>
             <event displayName="Type - Type" enabled="true" id="1" name="event-collide-typetotype" order="1" repeats="true"/>
+            <event displayName="Keyboard" enabled="true" id="2" name="event-key-press-release" order="2" repeats="true"/>
+            <event displayName="Actor Created" enabled="true" id="3" name="event-type-create-kill" order="3" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_4" classname="scripts.SceneEvents_4" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="22" name="SceneEvents_4" oid="-1" package="scripts." sceneid="4" shared="false" type="scene">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Type - Type" enabled="true" id="1" name="event-collide-typetotype" order="1" repeats="true"/>
+            <event displayName="Keyboard" enabled="true" id="2" name="event-key-press-release" order="2" repeats="true"/>
+            <event displayName="Actor Created" enabled="true" id="3" name="event-type-create-kill" order="3" repeats="true"/>
+        </events>
     </snippet>
 </pack>
