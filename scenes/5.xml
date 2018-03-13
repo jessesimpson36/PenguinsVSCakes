@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scene depth="1" desc="" eventsnippetid="29" extheight="544" extwidth="2560" extx="-32" exty="-32" format="3.4.0" gravx="-0.0" gravy="0.0" height="480" id="5" name="level4" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="2496">
+    <layers>
+        <color-bg blue="255" green="255" red="255"/>
+        <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+    </layers>
+    <joints/>
+    <regions/>
+    <terrainRegions/>
+    <actors>
+        <actor a="0.0" aid="1" c="false" group="3" id="45" name="duo 1" sx="1.0" sy="1.0" x="4" y="99" z="0"/>
+        <actor a="0.0" aid="2" c="false" group="3" id="6" name="ship 2" sx="0.75409836" sy="0.62032086" x="2376" y="-48" z="0"/>
+        <actor a="0.0" aid="3" c="false" group="3" id="43" name="evilClouds 3" sx="1.3861386" sy="0.5555556" x="322" y="-12" z="0"/>
+        <actor a="0.0" aid="4" c="false" group="3" id="43" name="evilClouds 4" sx="1.0" sy="0.37777779" x="972" y="-12" z="0"/>
+        <actor a="0.0" aid="6" c="false" group="3" id="43" name="evilClouds 6" sx="1.0" sy="1.0" x="1466" y="9" z="0"/>
+        <actor a="0.0" aid="7" c="false" group="3" id="43" name="evilClouds 7" sx="1.3465346" sy="0.46666667" x="2041" y="-9" z="0"/>
+        <actor a="0.0" aid="8" c="false" group="3" id="4" name="cake 8" sx="0.2871795" sy="0.26" x="1723" y="291" z="0"/>
+        <actor a="0.0" aid="9" c="false" group="3" id="22" name="goodfish 9" sx="1.0" sy="1.0" x="194" y="231" z="0"/>
+        <actor a="0.0" aid="10" c="false" group="3" id="22" name="goodfish 10" sx="1.0" sy="1.0" x="585" y="124" z="0"/>
+        <actor a="0.0" aid="11" c="false" group="3" id="20" name="badFish 11" sx="1.0" sy="1.0" x="332" y="417" z="0"/>
+        <actor a="0.0" aid="12" c="false" group="3" id="20" name="badFish 12" sx="1.0" sy="1.0" x="964" y="197" z="0"/>
+        <actor a="0.0" aid="13" c="false" group="3" id="22" name="goodfish 13" sx="1.0" sy="1.0" x="1120" y="307" z="0"/>
+        <actor a="0.0" aid="14" c="false" group="3" id="22" name="goodfish 14" sx="1.0" sy="1.0" x="1490" y="231" z="0"/>
+        <actor a="0.0" aid="15" c="false" group="3" id="20" name="badFish 15" sx="1.0" sy="1.0" x="1348" y="373" z="0"/>
+        <actor a="0.0" aid="16" c="false" group="3" id="20" name="badFish 16" sx="1.0" sy="1.0" x="1717" y="146" z="0"/>
+        <actor a="0.0" aid="17" c="false" group="3" id="22" name="goodfish 17" sx="1.0" sy="1.0" x="2038" y="357" z="0"/>
+        <actor a="0.0" aid="19" c="false" group="3" id="20" name="badFish 19" sx="1.0" sy="1.0" x="2293" y="215" z="0"/>
+        <actor a="0.0" aid="20" c="false" group="3" id="4" name="cake 20" sx="0.23076923" sy="0.2" x="595" y="80" z="0"/>
+        <actor a="0.0" aid="21" c="false" group="3" id="22" name="goodfish 21" sx="1.0" sy="1.0" x="733" y="401" z="0"/>
+        <actor a="0.0" aid="22" c="false" group="3" id="22" name="goodfish 22" sx="1.0" sy="1.0" x="816" y="397" z="0"/>
+        <actor a="0.0" aid="23" c="false" group="3" id="22" name="goodfish 23" sx="1.0" sy="1.0" x="1314" y="151" z="0"/>
+        <actor a="0.0" aid="24" c="false" group="3" id="22" name="goodfish 24" sx="1.0" sy="1.0" x="1847" y="201" z="0"/>
+    </actors>
+    <snippets/>
+    <terrain>
+        <p pts="4,2496.0,480.0,0.0,480.0,0.0,0.0,2496.0,0.0" x="0.0" y="0.0"/>
+    </terrain>
+    <atlases members="" retainAtlases="true"/>
+</scene>

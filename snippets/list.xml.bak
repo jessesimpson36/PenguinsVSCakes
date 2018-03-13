@@ -13,10 +13,10 @@
         <blocks/>
         <events>
             <event displayName="Actor - Type" enabled="true" id="1" name="event-collide-actortotype" order="1" repeats="false"/>
-            <event displayName="Actor - Type" enabled="true" id="2" name="event-collide-actortotype" order="9" repeats="true"/>
+            <event displayName="Actor - Type" enabled="true" id="2" name="event-collide-actortotype" order="9" repeats="false"/>
             <event displayName="Actor - Type" enabled="true" id="5" name="event-collide-actortotype" order="4" repeats="true"/>
-            <event displayName="Actor - Type" enabled="true" id="6" name="event-collide-actortotype" order="5" repeats="true"/>
-            <event displayName="Keyboard" enabled="true" id="7" name="event-key-press-release" order="2" repeats="true"/>
+            <event displayName="Actor - Type" enabled="true" id="6" name="event-collide-actortotype" order="5" repeats="false"/>
+            <event displayName="Keyboard" enabled="true" id="7" name="event-key-press-release" order="2" repeats="false"/>
             <event displayName="Keyboard" enabled="true" id="8" name="event-key-press-release" order="3" repeats="true"/>
         </events>
     </snippet>
@@ -69,7 +69,7 @@
         <events>
             <event displayName="Actor - Any" enabled="true" id="2" name="collide" order="2" repeats="true"/>
             <event displayName="Actor - Any" enabled="true" id="3" name="collide" order="3" repeats="true"/>
-            <event displayName="Updating" enabled="true" id="4" name="step" order="4" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="4" name="step" order="4" repeats="false"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_7_7_BackandForthHorizontally" classname="scripts.Design_7_7_BackandForthHorizontally" desc="Makes the actor move back and forth horizontally." description="Makes the actor move back and forth horizontally." design="true" drawOrder="0" id="7" name="Back and Forth Horizontally" oid="-1" package="scripts" shared="false" type="actor">
@@ -280,7 +280,7 @@
         <blocks/>
         <events>
             <event displayName="Type - Type" enabled="true" id="1" name="event-collide-typetotype" order="1" repeats="true"/>
-            <event displayName="Keyboard" enabled="true" id="2" name="event-key-press-release" order="2" repeats="true"/>
+            <event displayName="Keyboard" enabled="true" id="2" name="event-key-press-release" order="2" repeats="false"/>
             <event displayName="Actor Created" enabled="true" id="3" name="event-type-create-kill" order="3" repeats="true"/>
         </events>
     </snippet>
@@ -290,6 +290,107 @@
             <event displayName="Type - Type" enabled="true" id="1" name="event-collide-typetotype" order="1" repeats="true"/>
             <event displayName="Keyboard" enabled="true" id="2" name="event-key-press-release" order="2" repeats="true"/>
             <event displayName="Actor Created" enabled="true" id="3" name="event-type-create-kill" order="3" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="41" attachedevent="true" class="scripts.ActorEvents_41" classname="scripts.ActorEvents_41" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="26" name="ActorEvents_41" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Actor - Any" enabled="false" id="2" name="collide" order="1" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="3" name="step" order="4" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="43" attachedevent="true" class="scripts.ActorEvents_43" classname="scripts.ActorEvents_43" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="27" name="ActorEvents_43" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Every N secs" enabled="true" id="1" name="event-periodic" order="1" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="45" attachedevent="true" class="scripts.ActorEvents_45" classname="scripts.ActorEvents_45" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="28" name="ActorEvents_45" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Keyboard" enabled="false" id="1" name="event-key-press-release" order="1" repeats="false"/>
+            <event displayName="Keyboard" enabled="false" id="2" name="event-key-press-release" order="5" repeats="true"/>
+            <event displayName="Actor - Type" enabled="true" id="3" name="event-collide-actortotype" order="2" repeats="true"/>
+            <event displayName="Actor - Type" enabled="true" id="4" name="event-collide-actortotype" order="3" repeats="true"/>
+            <event displayName="Actor - Type" enabled="true" id="6" name="event-collide-actortotype" order="6" repeats="true"/>
+            <event displayName="Actor - Type" enabled="true" id="7" name="event-collide-actortotype" order="7" repeats="true"/>
+            <event displayName="Actor - Type" enabled="true" id="8" name="event-collide-actortotype" order="8" repeats="true"/>
+            <event displayName="Actor - Type" enabled="true" id="9" name="event-collide-actortotype" order="9" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_5" classname="scripts.SceneEvents_5" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="29" name="SceneEvents_5" oid="-1" package="scripts." sceneid="5" shared="false" type="scene">
+        <blocks/>
+        <events>
+            <event displayName="Type - Type" enabled="true" id="1" name="event-collide-typetotype" order="1" repeats="true"/>
+            <event displayName="Keyboard" enabled="true" id="2" name="event-key-press-release" order="2" repeats="true"/>
+            <event displayName="Actor Created" enabled="true" id="3" name="event-type-create-kill" order="3" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_30_30_4WayMovement" classname="scripts.Design_30_30_4WayMovement" desc="Allows the actor to move up, down, left and right." description="Allows the actor to move up, down, left and right." design="true" drawOrder="0" id="30" name="4 Way Movement" oid="-1" package="scripts" shared="false" type="actor">
+        <control default="" defaultValue="" desc="" dropdown="" fullname="Down Control" hidden="false" id="32" name="_DownControl" order="8"/>
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <control default="" defaultValue="" desc="" dropdown="" fullname="Left Control" hidden="false" id="33" name="_LeftControl" order="9"/>
+        <control default="" defaultValue="" desc="" dropdown="" fullname="Right Control" hidden="false" id="34" name="_RightControl" order="10"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Move X" hidden="true" id="38" name="_MoveX" order="1"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Move Y" hidden="true" id="39" name="_MoveY" order="2"/>
+        <boolean default="true" defaultValue="true" desc="If selected, the actor will not be able to turn while moving." dropdown="" fullname="Stop Turning" hidden="false" id="40" name="_StopTurning" order="13"/>
+        <number default="30.0" defaultValue="30.0" desc="The speed of the movement." dropdown="" fullname="Speed" hidden="false" id="11" name="_Speed" order="11"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Prefer X" hidden="true" id="44" name="_PreferX" order="3"/>
+        <boolean default="false" defaultValue="false" desc="If selected, the actor will stop moving if diagonal keys are pressed at the same.&lt;br /&gt;&#10;If unselected, the actor will move in the direction of the most recently pressed key." dropdown="" fullname="Diagonal Stop" hidden="false" id="45" name="_DiagonalStop" order="12"/>
+        <boolean default="true" defaultValue="true" desc="If selected, the control attributes will be used to control the movement.&lt;br /&gt;&#10;If unselected, the control attributes are ignored and the movement can be controlled by triggering custom events.&lt;br /&gt;&#10;Trigger the events  &lt;var&gt;MoveUp&lt;/var&gt;, &lt;var&gt;MoveDown&lt;/var&gt;, &lt;var&gt;MoveLeft&lt;/var&gt; or &lt;var&gt;MoveRight&lt;/var&gt; to make the actor move as if the keys were pressed." dropdown="" fullname="Use Controls" hidden="false" id="46" name="_UseControls" order="6"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="X Idle" hidden="true" id="47" name="_XIdle" order="4"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Y Idle" hidden="true" id="49" name="_YIdle" order="5"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Up Animation (Idle)" hidden="false" id="50" name="_UpAnimationIdle" order="15"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Up Animation" hidden="false" id="51" name="_UpAnimation" order="16"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Down Animation (Idle)" hidden="false" id="52" name="_DownAnimationIdle" order="17"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Down Animation" hidden="false" id="53" name="_DownAnimation" order="18"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Left Animation (Idle)" hidden="false" id="54" name="_LeftAnimationIdle" order="19"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Left Animation" hidden="false" id="55" name="_LeftAnimation" order="20"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Right Animation (Idle)" hidden="false" id="56" name="_RightAnimationIdle" order="21"/>
+        <animation default="" defaultValue="" desc="" dropdown="" fullname="Right Animation" hidden="false" id="57" name="_RightAnimation" order="22"/>
+        <boolean default="true" defaultValue="true" desc="If selected, the animation attributes will be used, otherwise they will be ignored." dropdown="" fullname="Use Animations" hidden="false" id="58" name="_UseAnimations" order="14"/>
+        <control default="" defaultValue="" desc="" dropdown="" fullname="Up Control" hidden="false" id="31" name="_UpControl" order="7"/>
+        <blocks/>
+        <events>
+            <event displayName="Updated" enabled="true" id="3" name="step" order="3" repeats="true"/>
+            <event displayName="Custom Event" enabled="true" id="4" name="event-custom" order="4" repeats="true"/>
+            <event displayName="Custom Event" enabled="true" id="5" name="event-custom" order="5" repeats="true"/>
+            <event displayName="Custom Event" enabled="true" id="6" name="event-custom" order="6" repeats="true"/>
+            <event displayName="Custom Event" enabled="true" id="7" name="event-custom" order="7" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_31_31_FireBulletWave" classname="scripts.Design_31_31_FireBulletWave" desc="Spawn a wave of bullets from the actor's position." description="Spawn a wave of bullets from the actor's position." design="true" drawOrder="0" id="31" name="Fire Bullet Wave" oid="-1" package="scripts" shared="false" type="actor">
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <number default="50.0" defaultValue="50.0" desc="The speed at which the bullets will move." dropdown="" fullname="Bullet Speed" hidden="false" id="2" name="_BulletSpeed" order="12"/>
+        <actortype default="" defaultValue="" desc="The bullet actor type to create.&lt;br/&gt;&#10;" dropdown="" fullname="Bullet Type" hidden="false" id="4" name="_BulletType" order="9"/>
+        <number default="0.0" defaultValue="0.0" desc="The mean direction in which the bullet will move. The bullets will spread to the left and the right.&lt;br/&gt;&#10;Only used if &lt;em&gt;Direction Mode&lt;/em&gt; is &lt;em&gt;Relative&lt;/em&gt; or &lt;em&gt;Absolute&lt;/em&gt;. If &lt;em&gt;Direction Mode&lt;/em&gt; is &lt;em&gt;Based on Animations&lt;/em&gt; the following four attributes determine the direction instead." dropdown="North=-90&#10;North East=-45&#10;East=0&#10;South East=45&#10;South=90&#10;South West=135&#10;West=180&#10;North West=-135" fullname="Direction" hidden="false" id="5" name="_Direction" order="14"/>
+        <number default="0.0" defaultValue="0.0" desc="The offset in the direction of movement at which the bullets will be created." dropdown="" fullname="Offset" hidden="false" id="9" name="_Offset" order="20"/>
+        <control default="" defaultValue="" desc="" dropdown="" fullname="Fire Control" hidden="false" id="13" name="_FireControl" order="8"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Fire Direction" hidden="true" id="15" name="_FireDirection" order="2"/>
+        <boolean default="true" defaultValue="true" desc="If selected, holding down the &lt;var&gt;Fire Control&lt;/var&gt; will fire bullets.&lt;br /&gt;&#10;&lt;br /&gt;&#10;You can also trigger the &lt;var&gt;FireBullet&lt;/var&gt; event to fire a bullet." dropdown="" fullname="Use Controls" hidden="false" id="16" name="_UseControls" order="7"/>
+        <boolean default="true" defaultValue="true" desc="If selected, holding down the mouse will fire bullets." dropdown="" fullname="Use the Mouse" hidden="false" id="17" name="_UsetheMouse" order="6"/>
+        <boolean default="false" defaultValue="false" desc="If selected, no more than &lt;var&gt;Maximum Bullets Alive&lt;/var&gt; can be alive at the same time." dropdown="" fullname="Limit Bullets Alive" hidden="false" id="18" name="_LimitBulletsAlive" order="22"/>
+        <number default="3.0" defaultValue="3.0" desc="The maximum number of bullets to be alive at the same time. Only used if &lt;var&gt;Limit Bullets Alive&lt;/var&gt; is selected." dropdown="" fullname="Maximum Bullets Alive" hidden="false" id="19" name="_MaximumBulletsAlive" order="23"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Bullets Alive" hidden="true" id="20" name="_BulletsAlive" order="3"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Fire" hidden="true" id="21" name="_Fire" order="1"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="Wait" hidden="true" id="22" name="_Wait" order="4"/>
+        <number default="3.0" defaultValue="3.0" desc="The maximum number of bullets created per second." dropdown="" fullname="Rate Of Fire" hidden="false" id="23" name="_RateOfFire" order="21"/>
+        <number default="5.0" defaultValue="5.0" desc="The maximum ammunition the actor can have.&lt;br /&gt;&#10;Only used if &lt;var&gt;Use Ammunition&lt;/var&gt; is selected." dropdown="" fullname="Maximum Ammunition" hidden="false" id="24" name="_MaximumAmmunition" order="25"/>
+        <number default="5.0" defaultValue="5.0" desc="The current ammunition the actor has when created.&lt;br /&gt;&#10;Only used if &lt;var&gt;Use Ammunition&lt;/var&gt; is selected.&lt;br/&gt;Trigger the &lt;var&gt;Reload&lt;/var&gt; event to set the current ammunition to the maximum ammunition." dropdown="" fullname="Current Ammunition" hidden="false" id="25" name="_CurrentAmmunition" order="26"/>
+        <boolean default="false" defaultValue="false" desc="If selected, the current ammunition will be reduced by one on every shot." dropdown="" fullname="Use Ammunition" hidden="false" id="26" name="_UseAmmunition" order="24"/>
+        <number default="3.0" defaultValue="3.0" desc="The number of bullets in a wave." dropdown="" fullname="Number of Bullets" hidden="false" id="27" name="_NumberofBullets" order="10"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="First Direction" hidden="true" id="28" name="_FirstDirection" order="5"/>
+        <number default="30.0" defaultValue="30.0" desc="The angle between the bullets in a wave." dropdown="" fullname="Bullet Spread" hidden="false" id="30" name="_BulletSpread" order="11"/>
+        <text default="" defaultValue="" desc="Shoot up if the current animation name contains this text." dropdown="" fullname="Up Animations" hidden="false" id="31" name="_UpAnimations" order="15"/>
+        <text default="" defaultValue="" desc="Shoot down if the current animation name contains this text." dropdown="" fullname="Down Animations" hidden="false" id="32" name="_DownAnimations" order="16"/>
+        <text default="" defaultValue="" desc="Shoot left if the current animation name contains this text." dropdown="" fullname="Left Animations" hidden="false" id="33" name="_LeftAnimations" order="17"/>
+        <text default="" defaultValue="" desc="Shoot right if the current animation name contains this text." dropdown="" fullname="Right Animations" hidden="false" id="34" name="_RightAnimations" order="18"/>
+        <text default="" defaultValue="" desc="How to determine the direction of the bullets:&lt;br/&gt;&#10;&lt;br/&gt;&#10;&lt;em&gt;Relative&lt;/em&gt; - Treat &lt;em&gt;Direction&lt;/em&gt; relative to the actor's orientation.&lt;br/&gt;&#10;&lt;em&gt;Absolute&lt;/em&gt; - Treat &lt;em&gt;Direction &lt;/em&gt; as absolute.&lt;br/&gt;&#10;&lt;em&gt;Based on Animations&lt;/em&gt; - Determine the direction based on the current animation." dropdown="Relative=Relative&#10;Absolute=Absolute&#10;Based on Animations=Based on Animations" fullname="Direction Mode" hidden="false" id="35" name="_DirectionMode" order="13"/>
+        <blocks/>
+        <events>
+            <event displayName="FireBullet" enabled="true" id="6" name="event-custom" order="10" repeats="true"/>
+            <event displayName="Updated" enabled="true" id="9" name="step" order="9" repeats="true"/>
+            <event displayName="Reload" enabled="true" id="10" name="event-custom" order="11" repeats="true"/>
         </events>
     </snippet>
 </pack>
