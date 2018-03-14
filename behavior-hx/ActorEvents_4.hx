@@ -40,7 +40,6 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
-import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -70,43 +69,39 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_3 extends SceneScript
+class ActorEvents_4 extends ActorScript
 {
 	
 	
-	public function new(dummy:Int, dummy2:Engine)
+	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
-		super();
+		super(actor);
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ========================= Type & Type ========================== */
-		addSceneCollisionListener(getActorType(2).ID, getActorType(6).ID, function(event:Collision, list:Array<Dynamic>):Void
+		/* ======================= Every N seconds ======================== */
+		runPeriodically(1000 * 2, function(timeTask:TimedTask):Void
 		{
 			if(wrapper.enabled)
 			{
-				switchScene(GameModel.get().scenes.get(4).getID(), createPixelizeOut(1, Utils.getColorRGB(153,51,255)), createFadeIn(1, Utils.getColorRGB(0,0,0)));
+				actor.say("Fire Bullet", "_customEvent_" + "FireBullet");
 			}
-		});
-		
-		/* =========================== Keyboard =========================== */
-		addKeyStateListener("enter", function(pressed:Bool, released:Bool, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && pressed)
-			{
-				reloadCurrentScene(null, createCrossfadeTransition(1));
-			}
-		});
+		}, actor);
 		
 		/* ======================== Actor of Type ========================= */
-		addWhenTypeGroupKilledListener(getActorType(2), function(eventActor:Actor, list:Array<Dynamic>):Void
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled)
+			if(wrapper.enabled && sameAsAny(getActorType(47), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
-				switchScene(GameModel.get().scenes.get(3).getID(), createFadeOut(2, Utils.getColorRGB(153,0,153)), createFadeIn(2, Utils.getColorRGB(0,0,0)));
+				recycleActor(event.otherActor);
+				actor.say("Health Manager", "_customBlock_Heal", [-2]);
+				if((cast(actor.say("Health Manager", "_customBlock_GetCurrentHealth"), Float) <= 0))
+				{
+					recycleActor(actor);
+				}
 			}
 		});
 		

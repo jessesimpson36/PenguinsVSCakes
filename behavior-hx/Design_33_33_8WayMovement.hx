@@ -69,21 +69,43 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_2_2_2WayHorizontalMovement extends ActorScript
+class Design_33_33_8WayMovement extends ActorScript
 {
+	public var _DownControl:String;
 	public var _LeftControl:String;
 	public var _RightControl:String;
 	public var _MoveX:Float;
+	public var _MoveY:Float;
+	public var _NormalizeDiagonalSpeed:Bool;
+	public var _Sqrt2:Float;
+	public var _StopTurningWhileMoving:Bool;
 	public var _UseControls:Bool;
-	public var _PreventVerticalMovement:Bool;
-	public var _StartY:Float;
+	public var _Speed:Float;
+	public var _UseAnimations:Bool;
+	public var _UpAnimationIdle:String;
+	public var _UpAnimation:String;
+	public var _DownAnimationIdle:String;
+	public var _DownAnimation:String;
 	public var _LeftAnimationIdle:String;
 	public var _LeftAnimation:String;
 	public var _RightAnimationIdle:String;
-	public var _Speed:Float;
 	public var _RightAnimation:String;
-	public var _UseAnimations:Bool;
-	public var _StopTurning:Bool;
+	public var _PreferVerticalAnimtations:Bool;
+	public var _UpControl:String;
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_MoveUp():Void
+	{
+		_MoveY = asNumber(-1);
+		propertyChanged("_MoveY", _MoveY);
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_MoveDown():Void
+	{
+		_MoveY = asNumber(1);
+		propertyChanged("_MoveY", _MoveY);
+	}
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_MoveLeft():Void
@@ -103,27 +125,37 @@ class Design_2_2_2WayHorizontalMovement extends ActorScript
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("Down Control", "_DownControl");
 		nameMap.set("Actor", "actor");
 		nameMap.set("Left Control", "_LeftControl");
 		nameMap.set("Right Control", "_RightControl");
 		nameMap.set("Move X", "_MoveX");
 		_MoveX = 0.0;
+		nameMap.set("Move Y", "_MoveY");
+		_MoveY = 0.0;
+		nameMap.set("Normalize Diagonal Speed", "_NormalizeDiagonalSpeed");
+		_NormalizeDiagonalSpeed = true;
+		nameMap.set("Sqrt2", "_Sqrt2");
+		_Sqrt2 = 0.0;
+		nameMap.set("Stop Turning While Moving", "_StopTurningWhileMoving");
+		_StopTurningWhileMoving = true;
 		nameMap.set("Use Controls", "_UseControls");
 		_UseControls = true;
-		nameMap.set("Prevent Vertical Movement", "_PreventVerticalMovement");
-		_PreventVerticalMovement = false;
-		nameMap.set("Start Y", "_StartY");
-		_StartY = 0.0;
+		nameMap.set("Speed", "_Speed");
+		_Speed = 30.0;
+		nameMap.set("Use Animations", "_UseAnimations");
+		_UseAnimations = true;
+		nameMap.set("Up Animation (Idle)", "_UpAnimationIdle");
+		nameMap.set("Up Animation", "_UpAnimation");
+		nameMap.set("Down Animation (Idle)", "_DownAnimationIdle");
+		nameMap.set("Down Animation", "_DownAnimation");
 		nameMap.set("Left Animation (Idle)", "_LeftAnimationIdle");
 		nameMap.set("Left Animation", "_LeftAnimation");
 		nameMap.set("Right Animation (Idle)", "_RightAnimationIdle");
-		nameMap.set("Speed", "_Speed");
-		_Speed = 30.0;
 		nameMap.set("Right Animation", "_RightAnimation");
-		nameMap.set("Use Animations", "_UseAnimations");
-		_UseAnimations = true;
-		nameMap.set("Stop Turning", "_StopTurning");
-		_StopTurning = true;
+		nameMap.set("Prefer Vertical Animtations", "_PreferVerticalAnimtations");
+		_PreferVerticalAnimtations = false;
+		nameMap.set("Up Control", "_UpControl");
 		
 	}
 	
@@ -131,8 +163,8 @@ class Design_2_2_2WayHorizontalMovement extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		_StartY = asNumber(actor.getY());
-		propertyChanged("_StartY", _StartY);
+		_Sqrt2 = asNumber(Math.sqrt(2));
+		propertyChanged("_Sqrt2", _Sqrt2);
 		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
@@ -143,24 +175,40 @@ class Design_2_2_2WayHorizontalMovement extends ActorScript
 				{
 					_MoveX = asNumber((asNumber(isKeyDown(_RightControl)) - asNumber(isKeyDown(_LeftControl))));
 					propertyChanged("_MoveX", _MoveX);
+					_MoveY = asNumber((asNumber(isKeyDown(_DownControl)) - asNumber(isKeyDown(_UpControl))));
+					propertyChanged("_MoveY", _MoveY);
 				}
-				actor.setXVelocity((_MoveX * _Speed));
-				if(_PreventVerticalMovement)
+				if((_NormalizeDiagonalSpeed && (!(_MoveX == 0) && !(_MoveY == 0))))
 				{
-					actor.setY(_StartY);
-					actor.setYVelocity(0);
+					actor.setXVelocity(((_MoveX * _Speed) / _Sqrt2));
+					actor.setYVelocity(((_MoveY * _Speed) / _Sqrt2));
 				}
-				if((_StopTurning && !(_MoveX == 0)))
+				else
+				{
+					actor.setXVelocity((_MoveX * _Speed));
+					actor.setYVelocity((_MoveY * _Speed));
+				}
+				if((_StopTurningWhileMoving && (!(_MoveX == 0) || !(_MoveY == 0))))
 				{
 					actor.setAngularVelocity(Utils.RAD * (0));
 				}
 				_MoveX = asNumber(0);
 				propertyChanged("_MoveX", _MoveX);
+				_MoveY = asNumber(0);
+				propertyChanged("_MoveY", _MoveY);
 				if(_UseAnimations)
 				{
-					if((actor.getXVelocity() == 0))
+					if(((actor.getXVelocity() == 0) && (actor.getYVelocity() == 0)))
 					{
-						if((actor.getAnimation() == _LeftAnimation))
+						if((actor.getAnimation() == _UpAnimation))
+						{
+							actor.setAnimation("" + _UpAnimationIdle);
+						}
+						else if((actor.getAnimation() == _DownAnimation))
+						{
+							actor.setAnimation("" + _DownAnimationIdle);
+						}
+						else if((actor.getAnimation() == _LeftAnimation))
 						{
 							actor.setAnimation("" + _LeftAnimationIdle);
 						}
@@ -168,6 +216,14 @@ class Design_2_2_2WayHorizontalMovement extends ActorScript
 						{
 							actor.setAnimation("" + _RightAnimationIdle);
 						}
+					}
+					else if(((actor.getYVelocity() < 0) && ((actor.getXVelocity() == 0) || _PreferVerticalAnimtations)))
+					{
+						actor.setAnimation("" + _UpAnimation);
+					}
+					else if(((actor.getYVelocity() > 0) && ((actor.getXVelocity() == 0) || _PreferVerticalAnimtations)))
+					{
+						actor.setAnimation("" + _DownAnimation);
 					}
 					else if((actor.getXVelocity() < 0))
 					{
