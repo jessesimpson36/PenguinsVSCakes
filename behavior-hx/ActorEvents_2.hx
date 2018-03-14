@@ -69,13 +69,16 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_41 extends ActorScript
+class ActorEvents_2 extends ActorScript
 {
+	public var _facingRight:Bool;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("facingRight", "_facingRight");
+		_facingRight = true;
 		
 	}
 	
@@ -85,18 +88,75 @@ class ActorEvents_41 extends ActorScript
 		/* ======================== Actor of Type ========================= */
 		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled && sameAsAny(getActorType(41), event.otherActor.getType(),event.otherActor.getGroup()))
+			if(wrapper.enabled && sameAsAny(getActorType(4), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
-				recycleActor(actor);
+				recycleActor(event.otherActor);
+				if((cast(actor.say("Health Manager", "_customBlock_GetCurrentHealth"), Float) <= 0))
+				{
+					recycleActor(actor);
+				}
 			}
 		});
 		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		/* =========================== Keyboard =========================== */
+		addKeyStateListener("left", function(pressed:Bool, released:Bool, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled)
+			if(wrapper.enabled && pressed)
 			{
-				if((actor.getYVelocity() == 0))
+				if(_facingRight)
+				{
+					actor.setX((actor.getX() - 20));
+					_facingRight = false;
+					propertyChanged("_facingRight", _facingRight);
+				}
+			}
+		});
+		
+		/* =========================== Keyboard =========================== */
+		addKeyStateListener("right", function(pressed:Bool, released:Bool, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && pressed)
+			{
+				if(!(_facingRight))
+				{
+					actor.setX((actor.getX() + 20));
+					_facingRight = true;
+					propertyChanged("_facingRight", _facingRight);
+				}
+			}
+		});
+		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(20), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				actor.say("Health Manager", "_customBlock_Heal", [-2]);
+				recycleActor(event.otherActor);
+				if((cast(actor.say("Health Manager", "_customBlock_GetCurrentHealth"), Float) <= 0))
+				{
+					recycleActor(actor);
+				}
+			}
+		});
+		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(22), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				actor.say("Health Manager", "_customBlock_Heal", [2]);
+				recycleActor(event.otherActor);
+			}
+		});
+		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(8), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				actor.say("Health Manager", "_customBlock_Damage", [2]);
+				if((cast(actor.say("Health Manager", "_customBlock_GetCurrentHealth"), Float) <= 0))
 				{
 					recycleActor(actor);
 				}

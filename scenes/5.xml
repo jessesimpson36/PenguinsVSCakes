@@ -10,7 +10,6 @@
     <actors>
         <actor a="0.0" aid="1" c="false" group="3" id="45" name="duo 1" sx="1.0" sy="1.0" x="4" y="99" z="0"/>
         <actor a="0.0" aid="2" c="false" group="3" id="6" name="ship 2" sx="0.75409836" sy="0.62032086" x="2376" y="-48" z="0"/>
-        <actor a="0.0" aid="3" c="false" group="3" id="43" name="evilClouds 3" sx="1.3861386" sy="0.5555556" x="322" y="-12" z="0"/>
         <actor a="0.0" aid="4" c="false" group="3" id="43" name="evilClouds 4" sx="1.0" sy="0.37777779" x="972" y="-12" z="0"/>
         <actor a="0.0" aid="6" c="false" group="3" id="43" name="evilClouds 6" sx="1.0" sy="1.0" x="1466" y="9" z="0"/>
         <actor a="0.0" aid="7" c="false" group="3" id="43" name="evilClouds 7" sx="1.3465346" sy="0.46666667" x="2041" y="-9" z="0"/>
@@ -29,7 +28,7 @@
         <actor a="0.0" aid="21" c="false" group="3" id="22" name="goodfish 21" sx="1.0" sy="1.0" x="733" y="401" z="0"/>
         <actor a="0.0" aid="22" c="false" group="3" id="22" name="goodfish 22" sx="1.0" sy="1.0" x="816" y="397" z="0"/>
         <actor a="0.0" aid="23" c="false" group="3" id="22" name="goodfish 23" sx="1.0" sy="1.0" x="1314" y="151" z="0"/>
-        <actor a="0.0" aid="24" c="false" group="3" id="22" name="goodfish 24" sx="1.0" sy="1.0" x="1847" y="201" z="0"/>
+        <actor a="0.0" aid="24" c="false" group="3" id="43" name="evilClouds 24" sx="1.8712871" sy="0.53333336" x="346" y="-19" z="0"/>
     </actors>
     <snippets/>
     <terrain>

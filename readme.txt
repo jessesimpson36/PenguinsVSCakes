@@ -45,11 +45,14 @@ Credits and Licensing
 
 This was a project made with Stencyl.
 
-Fish, Rocket Ship and tile sprites were retrieved by
+Fish, Rocket Ship, orange, and tile sprites were retrieved by
 http://kenney.nl/assets
 CreativeCommons CC0 1.0
 
-Rest of artwork was original.
+Cake, donut, penguin, penguin on eagle
+were original artwork made by our team members.
+
+Cloud and bullet were original artwork made in Google Drawings.
 
 
     Individual Contributions:

@@ -40,6 +40,7 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
+import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -69,27 +70,45 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_4 extends ActorScript
+class SceneEvents_3 extends SceneScript
 {
 	
 	
-	public function new(dummy:Int, actor:Actor, dummy2:Engine)
+	public function new(dummy:Int, dummy2:Engine)
 	{
-		super(actor);
+		super();
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================= Every N seconds ======================== */
-		runPeriodically(1000 * 2, function(timeTask:TimedTask):Void
+		/* ========================= Type & Type ========================== */
+		addSceneCollisionListener(getActorType(2).ID, getActorType(6).ID, function(event:Collision, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				actor.say("Fire Bullet", "_customEvent_" + "FireBullet");
+				switchScene(GameModel.get().scenes.get(4).getID(), createPixelizeOut(1, Utils.getColorRGB(153,51,255)), createFadeIn(1, Utils.getColorRGB(0,0,0)));
 			}
-		}, actor);
+		});
+		
+		/* =========================== Keyboard =========================== */
+		addKeyStateListener("enter", function(pressed:Bool, released:Bool, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && pressed)
+			{
+				reloadCurrentScene(null, createCrossfadeTransition(1));
+			}
+		});
+		
+		/* ======================== Actor of Type ========================= */
+		addWhenTypeGroupKilledListener(getActorType(2), function(eventActor:Actor, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				switchScene(GameModel.get().scenes.get(3).getID(), createFadeOut(2, Utils.getColorRGB(153,0,153)), createFadeIn(2, Utils.getColorRGB(0,0,0)));
+			}
+		});
 		
 	}
 	

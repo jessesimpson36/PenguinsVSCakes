@@ -1766,7 +1766,7 @@
         <tile collision="0" data="" durations="100" frames="1762" id="1762" order="-1"/>
         <tile collision="0" data="" durations="100" frames="1763" id="1763" order="-1"/>
     </tileset>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="16" fixedrot="true" fric="0.2" gid="3" id="20" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="badFish" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="21" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="16" fixedrot="true" fric="0.2" gid="3" id="20" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="badFish" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="21" static="true">
         <snippets/>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="42" id="21" name="badFish" shared="false" width="42">
@@ -1780,6 +1780,14 @@
     <tileset across="1" atlasID="0" desc="" down="1" id="25" name="brown" oid="-1" shared="false" th="32" tw="32">
         <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>
     </tileset>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="32" fixedrot="false" fric="0.2" gid="3" id="47" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="bullet" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="48" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="14" id="48" name="bullet" shared="false" width="27">
+        <anim across="1" down="1" durations="100" height="14" id="0" loop="true" name="Animation 0" numframes="1" originx="13" originy="7" sync="false" version="2" width="27">
+            <poly data="4,0,0,27,0,27,14,0,14" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="4" fixedrot="true" fric="0.2" gid="3" id="4" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="cake" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="5" static="false">
         <snippets>
             <s enabled="true" id="7">
@@ -1817,6 +1825,46 @@
                 <prop id="30" list="0" val=""/>
                 <prop id="31" list="0" val=""/>
             </s>
+            <s enabled="true" id="10">
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="1" list="0" val="6"/>
+                <prop id="2" list="0" val="6"/>
+                <prop id="3" list="0" val="3.0"/>
+                <prop id="4" list="0" val="Healed"/>
+                <prop id="5" list="0" val="Damaged"/>
+                <prop id="7" list="0" val="Kill"/>
+                <prop id="8" list="0" val="false"/>
+                <prop id="9" list="0" val="0"/>
+                <prop id="10" list="0" val="true"/>
+                <prop id="11" list="0" val="false"/>
+                <prop id="12" list="0" val="-1"/>
+                <prop id="13" list="0" val=""/>
+                <prop id="14" list="0" val="-1"/>
+                <prop id="15" list="0" val="-1"/>
+                <prop id="16" list="0" val="-1"/>
+                <prop id="17" list="0" val="false"/>
+                <prop id="18" list="0" val="0.0"/>
+                <prop id="19" list="0" val="0.0"/>
+                <prop id="20" list="0" val=""/>
+                <prop id="22" list="0" val="0.0"/>
+                <prop id="23" list="0" val="false"/>
+                <prop id="24" list="0" val="-1"/>
+                <prop id="25" list="0" val="0.0"/>
+                <prop id="26" list="0" val="-1"/>
+                <prop id="27" list="0" val="0.0"/>
+                <prop id="28" list="0" val="1.0"/>
+                <prop id="29" list="0" val="0.0"/>
+                <prop id="30" list="0" val="100.0"/>
+                <prop id="31" list="0" val="5.0"/>
+                <prop id="32" list="0" val="-1"/>
+                <prop id="39" list="0" val="0,0,0,255"/>
+                <prop id="41" list="0" val="0,255,0,255"/>
+                <prop id="42" list="0" val="255,255,0,255"/>
+                <prop id="43" list="0" val="255,153,0,255"/>
+                <prop id="44" list="0" val="255,0,0,255"/>
+                <prop id="45" list="0" val="0,0,0,255"/>
+                <prop id="46" list="0" val="false"/>
+            </s>
         </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="300" id="5" name="cake" shared="false" width="390">
@@ -1852,7 +1900,7 @@
             <poly data="4,10,0,45,0,45,34,10,34" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="28" fixedrot="false" fric="0.2" gid="3" id="45" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="duo" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="46" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="28" fixedrot="true" fric="0.2" gid="3" id="45" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="duo" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="46" static="false">
         <snippets>
             <s enabled="true" id="3">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -1879,6 +1927,31 @@
                 <prop id="60" list="0" val="true"/>
                 <prop id="62" list="0" val="0.1"/>
                 <prop id="63" list="0" val="50"/>
+            </s>
+            <s enabled="true" id="8">
+                <prop id="32" list="0" val="Relative"/>
+                <prop id="2147483647" list="0" val="thisactor"/>
+                <prop id="2" list="0" val="50.0"/>
+                <prop id="4" list="0" val="47"/>
+                <prop id="5" list="0" val="0"/>
+                <prop id="9" list="0" val="15"/>
+                <prop id="13" list="0" val="action2"/>
+                <prop id="15" list="0" val="0.0"/>
+                <prop id="16" list="0" val="true"/>
+                <prop id="17" list="0" val="false"/>
+                <prop id="18" list="0" val="false"/>
+                <prop id="19" list="0" val="2"/>
+                <prop id="20" list="0" val="0.0"/>
+                <prop id="21" list="0" val="false"/>
+                <prop id="22" list="0" val="false"/>
+                <prop id="23" list="0" val="10"/>
+                <prop id="24" list="0" val="5.0"/>
+                <prop id="25" list="0" val="5.0"/>
+                <prop id="26" list="0" val="true"/>
+                <prop id="28" list="0" val=""/>
+                <prop id="29" list="0" val=""/>
+                <prop id="30" list="0" val="Animation 1"/>
+                <prop id="31" list="0" val="Animation 0"/>
             </s>
             <s enabled="true" id="10">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -1985,7 +2058,7 @@
             <poly data="4,0,0,144,0,144,84,0,84" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 3" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="27" fixedrot="false" fric="0.2" gid="3" id="43" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="evilClouds" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="44" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="27" fixedrot="false" fric="0.2" gid="3" id="43" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="evilClouds" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="44" static="false">
         <snippets>
             <s enabled="true" id="31">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -2034,7 +2107,7 @@
     <custom-block blocktag="custom-16" blocktype="NORMAL" code="cast(.say(&quot;Health Manager&quot;, &quot;_customBlock_GetMaxHealth&quot;), Float)" desc="" global="false" gui="Maximum Health For %0" id="16" message="GetMaxHealth" name="GetMaxHealth" oid="-1" return="number" shared="false" snippetID="10">
         <blank name="Self" order="0" type="actor"/>
     </custom-block>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="17" fixedrot="true" fric="0.2" gid="3" id="22" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="goodfish" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="23" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="0" continuous="true" desc="" eventsnippetid="17" fixedrot="true" fric="0.2" gid="3" id="22" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="goodfish" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="23" static="true">
         <snippets/>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="42" id="23" name="goodfish" shared="false" width="42">

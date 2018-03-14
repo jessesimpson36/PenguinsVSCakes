@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_41 extends ActorScript
+class ActorEvents_45 extends ActorScript
 {
 	
 	
@@ -87,16 +87,78 @@ class ActorEvents_41 extends ActorScript
 		{
 			if(wrapper.enabled && sameAsAny(getActorType(41), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
-				recycleActor(actor);
+				actor.say("Health Manager", "_customBlock_Heal", [-2]);
+				recycleActor(event.otherActor);
+				actor.setFilter([createNegativeFilter()]);
+				runLater(1000 * 0.5, function(timeTask:TimedTask):Void
+				{
+					actor.setFilter([createNegativeFilter()]);
+				}, actor);
+				if((cast(actor.say("Health Manager", "_customBlock_GetCurrentHealth"), Float) <= 0))
+				{
+					recycleActor(actor);
+				}
 			}
 		});
 		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled)
+			if(wrapper.enabled && sameAsAny(getActorType(22), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
-				if((actor.getYVelocity() == 0))
+				actor.say("Health Manager", "_customBlock_Heal", [2]);
+				recycleActor(event.otherActor);
+			}
+		});
+		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(20), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				actor.say("Health Manager", "_customBlock_Heal", [-2]);
+				recycleActor(event.otherActor);
+				if((cast(actor.say("Health Manager", "_customBlock_GetCurrentHealth"), Float) <= 0))
+				{
+					recycleActor(actor);
+				}
+			}
+		});
+		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(8), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				actor.say("Health Manager", "_customBlock_Heal", [-2]);
+				recycleActor(event.otherActor);
+				if((cast(actor.say("Health Manager", "_customBlock_GetCurrentHealth"), Float) <= 0))
+				{
+					recycleActor(actor);
+				}
+			}
+		});
+		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(4), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				recycleActor(event.otherActor);
+				if((cast(actor.say("Health Manager", "_customBlock_GetCurrentHealth"), Float) <= 0))
+				{
+					recycleActor(actor);
+				}
+			}
+		});
+		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(43), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				actor.say("Health Manager", "_customBlock_Heal", [0]);
+				if((cast(actor.say("Health Manager", "_customBlock_GetCurrentHealth"), Float) <= 0))
 				{
 					recycleActor(actor);
 				}

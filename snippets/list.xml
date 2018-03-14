@@ -58,6 +58,7 @@
         <blocks/>
         <events>
             <event displayName="Every N secs" enabled="true" id="4" name="event-periodic" order="4" repeats="true"/>
+            <event displayName="Actor - Type" enabled="true" id="5" name="event-collide-actortotype" order="5" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="6" attachedevent="true" class="scripts.ActorEvents_6" classname="scripts.ActorEvents_6" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="5" name="ActorEvents_6" oid="-1" package="scripts." shared="false" type="actor">
@@ -296,7 +297,8 @@
         <blocks/>
         <events>
             <event displayName="Actor - Any" enabled="false" id="2" name="collide" order="1" repeats="true"/>
-            <event displayName="Updating" enabled="true" id="3" name="step" order="4" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="3" name="step" order="5" repeats="true"/>
+            <event displayName="Actor - Type" enabled="true" id="4" name="event-collide-actortotype" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="43" attachedevent="true" class="scripts.ActorEvents_43" classname="scripts.ActorEvents_43" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="27" name="ActorEvents_43" oid="-1" package="scripts." shared="false" type="actor">
@@ -392,5 +394,9 @@
             <event displayName="Updated" enabled="true" id="9" name="step" order="9" repeats="true"/>
             <event displayName="Reload" enabled="true" id="10" name="event-custom" order="11" repeats="true"/>
         </events>
+    </snippet>
+    <snippet actorid="47" attachedevent="true" class="scripts.ActorEvents_47" classname="scripts.ActorEvents_47" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="32" name="ActorEvents_47" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
     </snippet>
 </pack>
