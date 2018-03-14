@@ -2289,6 +2289,8 @@
             <poly data="4,0,0,122,0,122,374,0,374" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
+    <music atlasID="0" desc="" id="54" loop="true" name="shoot" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <music atlasID="0" desc="" id="55" loop="true" name="shootAlternative" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="13" fixedrot="false" fric="0.2" gid="3" id="18" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Start Game Button" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="19" static="false">
         <snippets>
             <s enabled="true" id="14">
