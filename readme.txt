@@ -54,6 +54,8 @@ were original artwork made by our team members.
 
 Cloud and bullet were original artwork made in Google Drawings.
 
+The level 2 and 3 tile sets came from https://www.widgetworx.com/spritelib/
+Common Public License Version 1.0 (CPL)
 
     Individual Contributions:
     -------------------------------------------------

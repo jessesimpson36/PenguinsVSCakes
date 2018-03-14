@@ -5,7 +5,9 @@
         <layer blendMode="normal" color="100,168,234" id="0" locked="false" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
     </layers>
     <joints/>
-    <regions/>
+    <regions>
+        <region b="64" g="64" h="16" id="0" name="Region 0" pts="4,3844.0,0.0,3844.0,16.0,0.0,16.0,0.0,0.0" r="64" type="box" w="3844" x="-3" y="468"/>
+    </regions>
     <terrainRegions/>
     <actors>
         <actor a="0.0" aid="1" c="false" group="3" id="4" name="cake 1" sx="0.2" sy="0.2" x="1553" y="131" z="0"/>
