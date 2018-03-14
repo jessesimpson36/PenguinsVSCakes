@@ -13,7 +13,7 @@
         <actor a="0.0" aid="4" c="false" group="3" id="43" name="evilClouds 4" sx="1.0" sy="0.37777779" x="972" y="-12" z="0"/>
         <actor a="0.0" aid="6" c="false" group="3" id="43" name="evilClouds 6" sx="1.0" sy="1.0" x="1466" y="9" z="0"/>
         <actor a="0.0" aid="7" c="false" group="3" id="43" name="evilClouds 7" sx="1.3465346" sy="0.46666667" x="2041" y="-9" z="0"/>
-        <actor a="0.0" aid="8" c="false" group="3" id="4" name="cake 8" sx="0.2871795" sy="0.26" x="1723" y="291" z="0"/>
+        <actor a="0.0" aid="8" c="false" group="3" id="4" name="cake 8" sx="0.2" sy="0.2" x="1669" y="73" z="0"/>
         <actor a="0.0" aid="9" c="false" group="3" id="22" name="goodfish 9" sx="1.0" sy="1.0" x="194" y="231" z="0"/>
         <actor a="0.0" aid="10" c="false" group="3" id="22" name="goodfish 10" sx="1.0" sy="1.0" x="585" y="124" z="0"/>
         <actor a="0.0" aid="11" c="false" group="3" id="20" name="badFish 11" sx="1.0" sy="1.0" x="332" y="417" z="0"/>
@@ -32,10 +32,7 @@
     </actors>
     <snippets/>
     <terrain>
-        <p pts="8,2496.0,480.0,0.0,480.0,0.0,0.0,2496.0,0.0,2496.0,256.0,2368.0,256.0,2368.0,288.0,2496.0,288.0" x="0.0" y="0.0"/>
-        <p pts="4,256.0,32.0,256.0,0.0,0.0,0.0,0.0,32.0" x="1664.0" y="256.0"/>
-        <p pts="4,224.0,32.0,224.0,0.0,0.0,0.0,0.0,32.0" x="640.0" y="256.0"/>
-        <p pts="4,96.0,32.0,96.0,0.0,0.0,0.0,0.0,32.0" x="1312.0" y="192.0"/>
+        <p pts="4,2496.0,480.0,0.0,480.0,0.0,0.0,2496.0,0.0" x="0.0" y="0.0"/>
     </terrain>
     <atlases members="" retainAtlases="true"/>
 </scene>

@@ -190,6 +190,7 @@ class Design_3_3_JumpandRunMovement extends ActorScript
 				{
 					_Jumping = true;
 					propertyChanged("_Jumping", _Jumping);
+					playSound(getSound(53));
 					if(_VariableJump)
 					{
 						_JumpHigher = true;

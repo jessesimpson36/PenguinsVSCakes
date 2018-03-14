@@ -99,6 +99,7 @@ class Design_8_8_FireBullet extends ActorScript
 	{
 		_Fire = true;
 		propertyChanged("_Fire", _Fire);
+		playSound(getSound(54));
 	}
 	
 	/* ========================= Custom Event ========================= */

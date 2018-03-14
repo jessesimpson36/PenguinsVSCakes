@@ -52,10 +52,15 @@
     <group eventID="4" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="4" id="-1">
-                <play-sound4 comment="false" x="26" y="40">
+                <control-sound-channel comment="false" x="26" y="40">
                     <int id="0" val="0"/>
-                    <sound eid="52" id="1"/>
-                </play-sound4>
+                    <int id="1" val="3"/>
+                </control-sound-channel>
+                <play-sound-channel comment="false" x="26" y="67">
+                    <int id="0" val="0"/>
+                    <sound eid="49" id="1"/>
+                    <int id="2" val="4"/>
+                </play-sound-channel>
             </group>
         </init>
     </group>
